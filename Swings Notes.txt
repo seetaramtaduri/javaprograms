@@ -1,0 +1,41 @@
+Using Components
+------------------------
+In Java, every part of a GUI is represented by a class in the Swing package.
+ JButton    class    for   buttons, 
+ JWindow  class   for   windows, a
+JTextField class   for   text fields
+
+A component is an individual element in a user interface, such as a button or slider.
+
+A container is a component that you can use to hold other components.
+
+Windows and frames are containers that can be displayed in a user inter- face and hold other components. 
+
+Windows are simple containers that do not have a title bar or any of the other buttons normally along the top edge of a GUI. 
+
+Frames are windows that include all the common windowing fe tures users expect to find when they run software—such as buttons to close, expand, and shrink the window.
+
+Create a subclass of JFrame
+---------------------------------------
+
+import javax.swing.*;
+public class MainFrame extends JFrame {
+public MainFrame() {
+// set up the frame
+}
+}
+
+A graphical user interface created with Swing can customize its appear-ance with a look and feel.
+
+Java 7 introduces an enhanced look and feel called Nimbus .
+
+You set a look and feel by calling the setLookAndFeel() method of the UIManager class in the main Swing
+package.
+
+The following statement sets Nimbus as the look and feel:
+
+UIManager.setLookAndFeel( “com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel” );
+
+to create a Button
+-------------------------
+JButton okButton = new JButton( “OK”);
